@@ -1,0 +1,22 @@
+What is version control and why is it important?
+Your response must:
+
+1. Explain the meaning of Version Control
+2. Highlight a benefit of Version Control
+3. Example of version control: Describe the way version control might be used on a software development team.
+4. Show a command used in Version Control (for example a Git command)
+5. Thoroughly explain these concepts (this likely cannot be done in less than 100 words)
+
+Response:
+
+    Version control is: a system that tracks the changes that are made as people collaborate on projects.  This seems to be similar to what is done in Google Drive as people work on documents together.
+
+    A benefit of version control is: a benefit is that the changes are tracked, so that if an earlier version of the code is needed it is easy to revert back to that previous version.  It also helps those who are collaborating on the project see the changes that other team members are making.
+
+    Example:  As a software development team, individuals might be working on different files within a project.  Having version control allows the team to have a consistent view of the various components of the project by viewing the changes that team members are making as well as the most up-to-date version.
+
+    A command that is used in version control: There are a few that were discussed this week in the learning activities which use the command line in the terminal.  
+        1. "git status" can be used to identify the status of any changes made within open folder such as staged and committed.
+        2. "git add <file name>" or "git add ." if you are in the current directory.
+        3. "git commit -m" this moves the changes from the staging area into the committed changes - need to make sure to include comments on the changes.
+        4. "git push" this syncs the changes between the local repository and Github repository
