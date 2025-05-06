@@ -42,7 +42,7 @@ class Program
         // I left core requirements 1 and 2 in so that I can see the two different ways of doing this code.
         Console.Write("Enter your grade percentage: ");
         int gradePercent = int.Parse(Console.ReadLine());
-        string letter; 
+        string letter = ""; 
 
         if (gradePercent >= 90)
         {
