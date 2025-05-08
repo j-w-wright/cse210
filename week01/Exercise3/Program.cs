@@ -12,35 +12,32 @@ class Program
         //string playAgain = "yes";
         //while (playAgain == "yes")
 
-
         int guessNumber = 0;
         {
-        Console.Write("What is the magic number? Please enter a number between 1 and 100: ");
-        int magicNumber = int.Parse(Console.ReadLine());
+            Console.Write("What is the magic number? Please enter a number between 1 and 100: ");
+            int magicNumber = int.Parse(Console.ReadLine());
         
-        while (guessNumber != magicNumber)
-        Console.Write("What is your guess? ");
-        guessNumber = int.Parse(Console.ReadLine());
+            while (guessNumber != magicNumber)
+            Console.Write("What is your guess? ");
+            guessNumber = int.Parse(Console.ReadLine());
 
-        {
-        if (guessNumber > magicNumber)
+            if (guessNumber > magicNumber)
             {       
                 Console.Write("What is your guess? ");
                 Console.WriteLine("Lower");
             }
             else if (guessNumber < magicNumber)
-                {
-                    Console.Write("What is your guess? ");
-                    Console.WriteLine("Higher");
-                }
+            {
+                Console.Write("What is your guess? ");
+                Console.WriteLine("Higher");
+            }
             else
-                {
-                    Console.WriteLine($"You guessed it!");
-                }
+            {
+                Console.WriteLine($"You guessed it!");
+            }
         }
         //Console.Write("Do you want to play again? Type yes or no: ");
         //playAgain = Console.ReadLin}
-        }
     }
 }
 
