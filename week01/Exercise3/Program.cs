@@ -6,21 +6,22 @@ class Program
     {
         Console.WriteLine("Welcome to the Guess the Number game!");
         Console.WriteLine();
-        Console.WriteLine("See if you can guess the number in the least amount of guesses.");
+        Console.WriteLine("See if you can guess the number with the least amount of guesses.");
         Console.WriteLine();
         
         //string playAgain = "yes";
         //while (playAgain == "yes")
 
-        int guessNumber = 0;
-        {
-            Console.Write("What is the magic number? Please enter a number between 1 and 100: ");
-            int magicNumber = int.Parse(Console.ReadLine());
         
-            while (guessNumber != magicNumber)
+        Console.Write("What is the magic number? Please enter a number between 1 and 100: ");
+        int magicNumber = int.Parse(Console.ReadLine());
+
+        int guessNumber = 0;
+        while (guessNumber != magicNumber)
+        {
             Console.Write("What is your guess? ");
             guessNumber = int.Parse(Console.ReadLine());
-
+            
             if (guessNumber > magicNumber)
             {       
                 Console.Write("What is your guess? ");
