@@ -9,27 +9,27 @@ class Program
         Console.WriteLine("See if you can guess the number with the least amount of guesses.");
         Console.WriteLine();
         
-        //string playAgain = "yes";
-        //while (playAgain == "yes")
-
-        
-        Console.Write("What is the magic number? Please enter a number between 1 and 100: ");
-        int magicNumber = int.Parse(Console.ReadLine());
+        string playAgain = "yes";
+        while (playAgain == "yes")
+        {
+            Random random = new Random();
+            int magicNumber = random.Next(1, 101);
 
         int guessNumber = 0;
+        int numberOfGuesses = 0;
+
         while (guessNumber != magicNumber)
         {
-            Console.Write("What is your guess? ");
+            Console.Write("Guess a number between 1 - 100: ");
             guessNumber = int.Parse(Console.ReadLine());
-            
+            numberOfGuesses++;
+
             if (guessNumber > magicNumber)
             {       
-                Console.Write("What is your guess? ");
                 Console.WriteLine("Lower");
             }
             else if (guessNumber < magicNumber)
             {
-                Console.Write("What is your guess? ");
                 Console.WriteLine("Higher");
             }
             else
@@ -37,8 +37,10 @@ class Program
                 Console.WriteLine($"You guessed it!");
             }
         }
-        //Console.Write("Do you want to play again? Type yes or no: ");
-        //playAgain = Console.ReadLin}
+        
+        Console.Write("Do you want to play again? Type yes or no: ");
+        playAgain = Console.ReadLine();
+        }
     }
 }
 
