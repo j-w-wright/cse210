@@ -5,28 +5,44 @@ class Program
     static void Main(string[] args)
     {
         Console.WriteLine("Welcome to the Guess the Number game!");
+        Console.WriteLine();
         Console.WriteLine("See if you can guess the number in the least amount of guesses.");
-
-        Console.WriteLine("What is the magic number? Please enter a number between 1 and 100: ");
-        int magicNumber = int.Parse(Console.ReadLine());
-        Console.Write("What is your guess? ");
-        int guessNumber = int.Parse(Console.ReadLine());
+        Console.WriteLine();
         
+        //string playAgain = "yes";
+        //while (playAgain == "yes")
+
+
+        int guessNumber = 0;
+        {
+        Console.Write("What is the magic number? Please enter a number between 1 and 100: ");
+        int magicNumber = int.Parse(Console.ReadLine());
+        
+        while (guessNumber != magicNumber)
+        Console.Write("What is your guess? ");
+        guessNumber = int.Parse(Console.ReadLine());
+
+        {
         if (guessNumber > magicNumber)
-        {
-            Console.WriteLine("Lower");
+            {       
+                Console.Write("What is your guess? ");
+                Console.WriteLine("Lower");
+            }
+            else if (guessNumber < magicNumber)
+                {
+                    Console.Write("What is your guess? ");
+                    Console.WriteLine("Higher");
+                }
+            else
+                {
+                    Console.WriteLine($"You guessed it!");
+                }
         }
-        else if (guessNumber < magicNumber)
-        {
-            Console.WriteLine("Higher");
-        }
-        else
-        {
-            Console.WriteLine($"You guessed it! The number is {magicNumber}.");
+        //Console.Write("Do you want to play again? Type yes or no: ");
+        //playAgain = Console.ReadLin}
         }
     }
 }
-
 
 
 
