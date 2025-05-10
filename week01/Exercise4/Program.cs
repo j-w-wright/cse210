@@ -46,9 +46,9 @@ class Program
                 }
             }
             // Display the results
-            Console.WriteLine($"The sum of the numbers is: {sum}");
-            Console.WriteLine($"The average of the numbers is: {average}");
-            Console.WriteLine($"The maximum number is: {largestNumber}");
+            Console.WriteLine($"The sum of the list of numbers is: {sum}");
+            Console.WriteLine($"The average of the list of numbers is: {average}");
+            Console.WriteLine($"The largest number is: {largestNumber}");
         }
         else
         {
