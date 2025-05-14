@@ -1,0 +1,14 @@
+What is abstraction and why is it important?
+Your response must:
+
+1. Explain the meaning of Abstraction.
+2. Highlight a benefit of Abstraction.
+3. Provide an application of Abstraction.
+4. Use a code example of Abstraction from the program you wrote. (You should copy and paste a few lines of code that demonstrate the use of the principle.)
+
+RESPONSE
+Explanation:
+
+Benefit:
+
+Application:

@@ -1,0 +1,79 @@
+Team Activity - Journal
+
+Date: May 14, 2025  at 8:00 am Mountain Daylight Time(MDT)
+Lead: Jared Wright
+
+AGENDA
+1. Verify the time, location, and lead student
+
+2. Begin with Prayer (who prayed: Gwen)
+
+3. Discuss the Preparation Learning Activity
+    a. What part of the learning activity was hardest for me?
+        - figuring out that the Job.cs and Resume.cs hold the class "blueprint" - they don't necessarily have the content.
+        - similar to Python, but getting an understanding of the differences
+
+4. Review the Program Specification
+    a. What does the program do?
+        - Allows a user to get a prompt, write about it, and then save it.
+        - Helps people record the events of their day by supplying prompts and then saving their responses along with the question and the date to a file.
+    b. What user inputs does it have?
+        - what do they want to do via a menu? write, display the entries, load the journal file, save their entry, quit
+        - respond to a prompt 
+        - respond to which file they want to load or save
+    c. What output does it produce?
+
+    d. How does the program end?  By selecting/typing in "5" for "Quit".
+
+5. Determine the classes
+    a. What are good candidates for classes in this program?
+    b. What are the primary responsibilities of each class?
+
+6. Define class behaviors
+    a. What are the behaviors this class will have in order to fulfill its responsibilities?  (In other words, what things should this class do?)
+
+7. Define class attributes
+    a. What attributes does this class need to fulfill its behaviors? (In other words, what member variables should this class store?)
+    b. What are the data types of these member variables?
+
+8.  Review the Design
+    a. Are there any classes, methods or variables, that I don't understand?
+
+9. Conclude the meeting
+    a. Who will lead the meeting next week? 
+
+SUBMISSION
+1. Journal Design
+2. Participation Report
+
+
+CLASSES - think of the strong nouns
+1. name: Journal (stores a list of journal entries.)
+    responsibilities:
+    behaviors (do):
+        * Stores a list of journal entries in a .txt file.
+        * Includes the date of the journal.
+    attributes:
+        * list of journal entries
+        string
+
+2. name: Entry (represents a single journal entry.)
+    responsibilities:
+    behaviors (do):
+        * Display a random prompt.
+        * Get a journal entry from the user.
+    attributes:
+        * entry text
+        * date
+        * random prompt 
+        * string
+
+3. name: PromptGenerator (supplies random prompts whenever needed.)
+    responsibilities:
+    behaviors (do):
+        * Supplies a random prompt.
+    attributes:
+        * list of prompts
+        * string
+
+
