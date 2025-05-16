@@ -8,7 +8,34 @@ Your response must:
 
 RESPONSE
 Explanation:
+    Abstraction is focusing on/displaying the relevant details and hiding the irrelevant implementation details.  The example in the lesson about the print function - programmers can use the print function within their code without seeing and knowing the thousands of lines of code within that function.
 
 Benefit:
+    This can help those who are using the abstracted code.  This could be programmers and/or users.  An analogy I heard online is that someone who is learning to drive a car, is shown the steering wheel, gas pedal, brake, and shifting.
 
 Application:
+    The code of within the program is an abstraction of the Resume code.
+
+//RESUME code:
+        public string _FirstName;
+        public string _LastName;
+        public List<Job> _Jobs = new List<Job>();
+        public void Display()
+        {
+            Console.WriteLine($"Name: {_FirstName} {_LastName}");
+            Console.WriteLine($"Jobs: ");
+            foreach (Job job in _Jobs)
+        }
+        {
+            job.Display();
+        } 
+
+//PROGRAM code:
+        Resume resume = new Resume();
+        resume._FirstName = "Ned";
+        resume._LastName = "Schnebley";
+
+        resume._Jobs.Add(job1);
+        resume._Jobs.Add(job2);
+
+        resume.Display();
