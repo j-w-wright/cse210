@@ -6,6 +6,19 @@ public class Entry
 
     public void Display()
     {
-        
-    }
+        // Display the date
+        _date = DateTime.Now.ToString("MM/dd/yyyy");
+        Console.WriteLine($"Date: {_date}");
+
+        // Create a new instance of Prompt Generator
+        PromptGenerator promptGenerator = new PromptGenerator(); 
+        // Get a random prompt
+        _promptText = promptGenerator.GetRandomPrompt(); 
+        Console.WriteLine($"Prompt: {_promptText}");
+
+        // Allow the user to enter their response
+        Console.WriteLine("Type your entry:");
+        // Read the user's input
+        _entryText = Console.ReadLine();
+    } 
 }

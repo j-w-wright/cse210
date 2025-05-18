@@ -1,4 +1,5 @@
 using System;
+using System.Security.Cryptography.X509Certificates;
 
 // Functional Requirements
 // This program must contain the following features:
@@ -9,11 +10,11 @@ using System;
 // 4. Load the journal from a file - Prompt the user for a filename and then load the journal (a complete list of entries) from that file. This should replace any entries currently stored the journal.
 // 5. Provide a menu that allows the user choose these options
 // 6. Your list of prompts must contain at least five different prompts. Make sure to add your own prompts to the list, but the following are examples to help get you started:
-        // Who was the most interesting person I interacted with today?
-        // What was the best part of my day?
-        // How did I see the hand of the Lord in my life today?
-        // What was the strongest emotion I felt today?
-        // If I had one thing I could do over today, what would it be?
+// Who was the most interesting person I interacted with today?
+// What was the best part of my day?
+// How did I see the hand of the Lord in my life today?
+// What was the strongest emotion I felt today?
+// If I had one thing I could do over today, what would it be?
 
 // Design Requirements
 // In addition, your program must:
@@ -26,6 +27,53 @@ class Program
 {
     static void Main(string[] args)
     {
-        Console.WriteLine("Hello World! This is the Journal Project.");
+        //Get the user's name
+        Console.Write("What is your name? ");
+        string name = Console.ReadLine();
+        Console.WriteLine();
+
+        Console.WriteLine($"Hi {name}! Welcome to your Journal.");
+        Console.WriteLine();
+        Console.WriteLine("What would you like to do?");
+        Console.WriteLine("1. Write a new entry");
+        Console.WriteLine("2. Display the journal entries");
+        Console.WriteLine("3. Save the journal entry to a file");
+        Console.WriteLine("4. Load the journal entry from a file");
+        Console.WriteLine("5. Quit");
+        Console.Write("Please enter your choice (1-5): ");
+        
+        // Get the user's choice
+        string choice = Console.ReadLine();
+
+        if (choice == "1")
+        {
+            // Create a new entry
+            Entry entry = new Entry();
+            entry.Display();
+        }
+        else if (choice == "2")
+        {
+            // Display the journal entries
+            Console.WriteLine("Displaying journal entries...");
+        }
+        else if (choice == "3")
+        {
+            // Save the journal entry to a file
+            Console.WriteLine("Saving journal entry to a file...");
+        }
+        else if (choice == "4")
+        {
+            // Load the journal entry from a file
+            Console.WriteLine("Loading journal entry from a file...");
+        }
+        else if (choice == "5")
+        {
+            // Quit the program
+            Console.WriteLine("Goodbye, Hope to see you soon!");
+        }
+        else
+        {
+            Console.WriteLine("Invalid choice. Please try again.");
+        } 
     }
 }
