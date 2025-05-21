@@ -5,7 +5,7 @@ class Program
     static void Main(string[] args)
     {
         //Console.WriteLine("Hello World!  This is the abstraction activity.");
-
+        // A new instance of the Job class.
         Job job1 = new Job();
         job1._JobTitle = "Software Engineer";
         job1._Company = "Apple";
@@ -16,17 +16,18 @@ class Program
             //job1._DisplayJobDetails = $"{job1._JobTitle} ({job1._Company}) {job1._StartYear}-{job1._EndYear}";
 
         //Console.WriteLine($"{job1._DisplayJobDetails}");
-
+        // A new instance of the Job class.
         Job job2 = new Job();
         job2._JobTitle = "Software Engineer";
         job2._Company = "Google";
         job2._StartYear = 2016;
         job2._EndYear = 2025;
         // The below line was moved to the Display method in the Job class.
-             //job1._DisplayJobDetails = $"{job1._JobTitle} ({job1._Company}) {job1._StartYear}-{job1._EndYear}"; 
+        //job1._DisplayJobDetails = $"{job1._JobTitle} ({job1._Company}) {job1._StartYear}-{job1._EndYear}"; 
 
         //Console.WriteLine($"{job2._DisplayJobDetails}");
 
+        // A new instance of the Resume class.
         Resume resume = new Resume();
         resume._FirstName = "Ned";
         resume._LastName = "Schnebley";

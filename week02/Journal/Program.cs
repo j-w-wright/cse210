@@ -34,46 +34,45 @@ class Program
 
         Console.WriteLine($"Hi {name}! Welcome to your Journal.");
         Console.WriteLine();
-        Console.WriteLine("What would you like to do?");
-        Console.WriteLine("1. Write a new entry");
-        Console.WriteLine("2. Display the journal entries");
-        Console.WriteLine("3. Save the journal entry to a file");
-        Console.WriteLine("4. Load the journal entry from a file");
-        Console.WriteLine("5. Quit");
-        Console.Write("Please enter your choice (1-5): ");
-        
         // Get the user's choice
-        string choice = Console.ReadLine();
+        while (true)
+        {
+            Console.WriteLine("What would you like to do?");
+            Console.WriteLine("1. Write a new entry");
+            Console.WriteLine("2. Display the journal entries");
+            Console.WriteLine("3. Save the journal entry to a file");
+            Console.WriteLine("4. Load the journal entry from a file");
+            Console.WriteLine("5. Quit");
+            Console.Write("Please enter your choice (1-5): ");
+            string choice = Console.ReadLine();
+            if (choice == "1")
+            {
+                // Create a new entry
+                Entry entry = new Entry();
+                entry.Display();
 
-        if (choice == "1")
-        {
-            // Create a new entry
-            Entry entry = new Entry();
-            entry.Display();
+            }
+            else if (choice == "2")
+            {
+                // Display the journal entries
+                
+            }
+            else if (choice == "3")
+            {
+                // Save the journal entry to a file
+                Console.WriteLine("Saving journal entry to a file...");
+            }
+            else if (choice == "4")
+            {
+                // Load the journal entry from a file
+                Console.WriteLine("Loading journal entry from a file...");
+            }
+            else if (choice == "5")
+            {
+                // Quit the program
+                Console.WriteLine("Goodbye! Come back to write some more soon.");
+                break;
+            }
         }
-        else if (choice == "2")
-        {
-            // Display the journal entries
-            Console.WriteLine("Displaying journal entries...");
-        }
-        else if (choice == "3")
-        {
-            // Save the journal entry to a file
-            Console.WriteLine("Saving journal entry to a file...");
-        }
-        else if (choice == "4")
-        {
-            // Load the journal entry from a file
-            Console.WriteLine("Loading journal entry from a file...");
-        }
-        else if (choice == "5")
-        {
-            // Quit the program
-            Console.WriteLine("Goodbye, Hope to see you soon!");
-        }
-        else
-        {
-            Console.WriteLine("Invalid choice. Please try again.");
-        } 
     }
 }

@@ -17,7 +17,7 @@ public class Entry
         Console.WriteLine($"Prompt: {_promptText}");
 
         // Allow the user to enter their response
-        Console.WriteLine("Type your entry:");
+        Console.WriteLine("Type the entry:");
         // Read the user's input
         _entryText = Console.ReadLine();
     } 
