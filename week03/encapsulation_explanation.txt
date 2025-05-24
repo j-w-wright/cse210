@@ -1,0 +1,10 @@
+Encapsulation Explanation
+
+1. Meaning:
+
+2. Benefits:
+
+3. Application:
+
+4. Length: 100+ words
+5. Code: include a code block that demonstrates the principle.

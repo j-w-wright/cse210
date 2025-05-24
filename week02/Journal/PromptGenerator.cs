@@ -1,13 +1,12 @@
 using System;
-using System.Collections.Generic;
 
 public class PromptGenerator 
 {
     public List<string> _prompts = new List<string>
     {
-        "What was the best part of my day?",
-        "What was I grateful for today?",
-        "How did I see the Lord in my life today?",
+        "What is the best part of my day?",
+        "What am I grateful for today?",
+        "How do I see the Lord in my life today?",
         "What is something I will improve on tomorrow?",
         "What is something I want to accomplish this week?",
         "What did you study in the scriptures today?",

@@ -1,5 +1,5 @@
 using System;
-using System.Security.Cryptography.X509Certificates;
+using StreamWriter = System.IO.StreamWriter;
 
 // Functional Requirements
 // This program must contain the following features:
@@ -31,9 +31,11 @@ class Program
         Console.Write("What is your name? ");
         string name = Console.ReadLine();
         Console.WriteLine();
-
         Console.WriteLine($"Hi {name}! Welcome to your Journal.");
         Console.WriteLine();
+
+        // Create a new instance of Journal
+        Journal journal = new Journal();
         // Get the user's choice
         while (true)
         {
@@ -47,25 +49,37 @@ class Program
             string choice = Console.ReadLine();
             if (choice == "1")
             {
-                // Create a new entry
-                Entry entry = new Entry();
-                entry.Display();
-
+                // Create a new journal entry
+                Console.WriteLine("Creating a new journal entry...");
+                // Create a new instance of Entry
+                Entry newEntry = new Entry();
+                journal.AddEntry(newEntry);
+                // Display the entry
+                newEntry.Display();
             }
             else if (choice == "2")
             {
                 // Display the journal entries
-                
+                Console.WriteLine("Displaying all journal entries...");
+                // Display all entries
+                journal.DisplayAll();
             }
             else if (choice == "3")
             {
                 // Save the journal entry to a file
-                Console.WriteLine("Saving journal entry to a file...");
+                Console.Write("Enter the filename to save the journal entry: ");
+                string filename = Console.ReadLine();
+                // Save the entry to the file
+                journal.SaveToFile(filename);
             }
             else if (choice == "4")
             {
                 // Load the journal entry from a file
-                Console.WriteLine("Loading journal entry from a file...");
+                Console.Write("Enter the filename to load the journal entry: ");
+                string filename = Console.ReadLine();
+                // Load the entries from the file
+                journal.LoadFromFile(filename);
+
             }
             else if (choice == "5")
             {
