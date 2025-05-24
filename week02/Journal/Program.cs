@@ -1,5 +1,7 @@
 using System;
-using StreamWriter = System.IO.StreamWriter;
+using System.Collections.Generic;
+using System.IO;
+using System.IO.Enumeration;
 
 // Functional Requirements
 // This program must contain the following features:
@@ -49,37 +51,32 @@ class Program
             string choice = Console.ReadLine();
             if (choice == "1")
             {
-                // Create a new journal entry
-                Console.WriteLine("Creating a new journal entry...");
                 // Create a new instance of Entry
                 Entry newEntry = new Entry();
                 journal.AddEntry(newEntry);
                 // Display the entry
                 newEntry.Display();
+                Console.WriteLine();
             }
             else if (choice == "2")
             {
-                // Display the journal entries
-                Console.WriteLine("Displaying all journal entries...");
                 // Display all entries
                 journal.DisplayAll();
             }
             else if (choice == "3")
             {
-                // Save the journal entry to a file
+                // Save the entries to the file
                 Console.Write("Enter the filename to save the journal entry: ");
-                string filename = Console.ReadLine();
-                // Save the entry to the file
-                journal.SaveToFile(filename);
+                string file = Console.ReadLine();
+                journal.SaveToFile(file);
             }
             else if (choice == "4")
             {
                 // Load the journal entry from a file
                 Console.Write("Enter the filename to load the journal entry: ");
-                string filename = Console.ReadLine();
+                string file = Console.ReadLine();
                 // Load the entries from the file
-                journal.LoadFromFile(filename);
-
+                journal.LoadFromFile(file);
             }
             else if (choice == "5")
             {

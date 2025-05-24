@@ -7,7 +7,8 @@ public class Entry
     public void Display()
     {
         // Display the date
-        _date = DateTime.Now.ToString("MM/dd/yyyy");
+        DateTime theCurrentTime = DateTime.Now;
+        _date = theCurrentTime.ToShortDateString();
         Console.WriteLine($"Date: {_date}");
 
         // Create a new instance of Prompt Generator
@@ -18,6 +19,7 @@ public class Entry
 
         // Allow the user to enter their response
         Console.WriteLine("Type the entry:");
+        Console.Write("> ");
         // Read the user's input
         _entryText = Console.ReadLine();
     } 
