@@ -1,10 +1,27 @@
 Encapsulation Explanation
 
-1. Meaning:
+1. Meaning:  Containing the variables and methods within a class, so that the access is controlled within that class.  Get and Set methods can be included within the class to access the restricted "private" data and behaviors.
 
-2. Benefits:
+2. Benefits:  The code that is encapsulated acts as one unit which is protected and hidden from outside access and how it is implemented.  It is easier to use as a unit in other areas of code.
 
 3. Application:
+
+example from Interview Happy https://www.youtube.com/watch?v=RWt-mm5k258
+
+public class Employee
+{
+    private int employeeExp;
+
+
+    
+    public int employeeExp - this is used to access the private employeeExp data.
+    {
+        get { return employeeExp; }
+
+        set { employeeExp = value; }
+    }
+}
+
 
 4. Length: 100+ words
 5. Code: include a code block that demonstrates the principle.

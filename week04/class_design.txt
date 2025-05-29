@@ -1,0 +1,91 @@
+ABSTRACTION
+YouTube Videos
+- requirements
+    1. Program.cs should create the required objects, set their values, and display them without any user interaction.
+
+1. Class: Program
+ - display the video title, author, length in seconds and the 2-3 comments
+
+2. Class: Video
+
+Variables/Attributes: //private access
+_title : string
+_author : string
+_length : int
+_comments : List<Comment> //need 3-4 comments for each video
+
+Methods/Behaviors:
+CommentQuantity() : int
+GetCommentsList() : string
+
+3. Class: Comment
+
+Variables/Attributes: //private access
+_name : string
+_text : string
+
+Methods/Behaviors:
+Display() void
+
+
+ENCAPSULATION
+Online Ordering
+- requirements
+    1. Program.cs should create the required objects, set their values, and display them without any user interaction.
+    2. At least 2 orders and 2-3 orders.
+
+* The Customer class will use the Address class. 
+* The Order class will use the Customer class and Product class.
+* The Program class will   
+
+
+1. Class: Program
+    - display the packing label, shipping label, and compute final, total price.
+
+2. Class: Product
+
+Variables/Attributes: //these will have the private access modifier
+_name : string
+_id : string
+_price : int
+_quantity : int
+
+Methods/Behaviors:
+TotalCost() : int // price per unit * quantity
+GetProductDisplay() //get the _name and _id  
+
+3. Class: Customer
+
+Variables/Attributes: //these will have the private access modifier
+_firstName : string
+_lastName : string
+use the Address class
+
+Methods/Behaviors:
+InUSA() : bool
+GetAddress()
+GetFullName()
+
+4. Class: Address
+
+Variables/Attributes: //these will have the private access modifier
+_addressStreet : string
+_addressCity : string
+_addressState : string
+_addressCountry : string
+
+Methods/Behaviors:
+InUsa() : bool
+Display() : void
+
+5. Class: Order
+
+Variables/Attributes: //these will have the private access modifier
+_products : List<string> //should this list be created within the Products class?
+_totalPrice : int //total cost of each product + shipping cost ($5 in USA or $35)
+_shippingLabel : string
+_packingLabel : string
+
+Methods/Behaviors:
+GetShippingLabel() : string //includes the name and id of each product in the order.
+GetPackingLabel() : string //includes the name and address of the customer.
