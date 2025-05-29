@@ -21,11 +21,12 @@ GetCommentsList() : string
 3. Class: Comment
 
 Variables/Attributes: //private access
-_name : string
-_text : string
+_author : string
+_commentText : string
 
 Methods/Behaviors:
-Display() void
+Author : constructor with get and set
+CommentText : constructor with get and set
 
 
 ENCAPSULATION
