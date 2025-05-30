@@ -1,4 +1,5 @@
 using System;
+using System.Runtime.CompilerServices;
 
 class Video
 {
@@ -6,11 +7,14 @@ class Video
     private string _author; // restrict access
     private int _length; // restrict access
 
+    public List<Comment> Comments { get; } = new List<Comment>(); // List to hold comments
+
     public Video(string title, string author, int length) // Constructor
     {
         _title = title;
         _author = author;
         _length = length;
+
     }
     public string Title // Property for title
     {
@@ -29,6 +33,6 @@ class Video
     }
     public string DisplayVideoInfo() // Method to display video information
     {
-        return $"Title: {_title} created by {_author}, Length: {_length} seconds";
+        return $"Title: {_title} Created by: {_author}, Length: {_length} seconds, Comments: {Comments.Count}";
     }
 }
