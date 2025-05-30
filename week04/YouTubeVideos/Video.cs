@@ -33,6 +33,6 @@ class Video
     }
     public string DisplayVideoInfo() // Method to display video information
     {
-        return $"Title: {_title} Created by: {_author}, Length: {_length} seconds, Comments: {Comments.Count}";
+        return $"Title: {_title} Created by: {_author}, Length: {_length} seconds, Number of comments: {Comments.Count}";
     }
 }

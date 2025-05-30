@@ -20,43 +20,13 @@ class Program
 
         Console.WriteLine();
 
-                // Display the comments
-        /* Console.WriteLine("Comments:");
-        Console.WriteLine(comment1.Author + ": " + comment1.CommentText);
-        Console.WriteLine(comment2.Author + ": " + comment2.CommentText);
-        Console.WriteLine(comment3.Author + ": " + comment3.CommentText);
-        Console.WriteLine(comment4.Author + ": " + comment4.CommentText);
-        Console.WriteLine(comment5.Author + ": " + comment5.CommentText);
-        Console.WriteLine(comment6.Author + ": " + comment6.CommentText);
-        Console.WriteLine(comment7.Author + ": " + comment7.CommentText);
-        Console.WriteLine(comment8.Author + ": " + comment8.CommentText);
-        Console.WriteLine(comment9.Author + ": " + comment9.CommentText);
-        Console.WriteLine(); 
-        */
-
-
         // Create instances of Videos
         Video video1 = new Video("How to Sail a Boat", "Captain Jack", 321);
         Video video2 = new Video("How to accomplish your goals", "Doctor Marvin", 670);
         Video video3 = new Video("How to dive", "Bob Wiley", 478);
 
-        // Display video information
-        /* Console.WriteLine("Videos:");
-        Console.WriteLine(video1.DisplayVideoInfo());
-        Console.WriteLine(video2.DisplayVideoInfo());
-        Console.WriteLine(video3.DisplayVideoInfo());
-        Console.WriteLine();*/
         // Create a list of videos
         Video[] videos = { video1, video2, video3 };
-
-
-        // Display all videos
-        /*Console.WriteLine("All Videos:");
-        foreach (Video video in videos)
-        {
-            Console.WriteLine(video.DisplayVideoInfo());
-        }
-        */
 
         video1.Comments.Add(comment1);
         video1.Comments.Add(comment2);
@@ -69,21 +39,21 @@ class Program
         video3.Comments.Add(comment9);
 
         Console.WriteLine(video1.DisplayVideoInfo());
-        Console.WriteLine("Comments for " + video1.Title + ":");
+        Console.WriteLine("Comments: ");
         foreach (Comment comment in video1.Comments)
         {
             Console.WriteLine(comment.Author + ": " + comment.CommentText);
         }
         Console.WriteLine();
         Console.WriteLine(video2.DisplayVideoInfo());
-        Console.WriteLine("Comments for " + video2.Title + ":");
+        Console.WriteLine("Comments: ");
         foreach (Comment comment in video2.Comments)
         {
             Console.WriteLine(comment.Author + ": " + comment.CommentText);
         }
         Console.WriteLine();
         Console.WriteLine(video3.DisplayVideoInfo());
-        Console.WriteLine("Comments for " + video3.Title + ":");
+        Console.WriteLine("Comments: ");
         foreach (Comment comment in video3.Comments)
         {
             Console.WriteLine(comment.Author + ": " + comment.CommentText);
