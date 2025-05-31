@@ -29,6 +29,7 @@ public class Scripture
                 _words[index].Hide();
                 count++;
             }
+            
         }
     }
 
