@@ -26,7 +26,7 @@ class Program
         Video video3 = new Video("How to dive", "Bob Wiley", 478);
 
         // Create a list of videos
-        Video[] videos = { video1, video2, video3 };
+        Video[] videos = {video1, video2, video3};
 
         video1.Comments.Add(comment1);
         video1.Comments.Add(comment2);
