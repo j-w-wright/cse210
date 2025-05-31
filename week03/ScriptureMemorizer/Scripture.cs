@@ -39,19 +39,6 @@ public class Scripture
         }
     }
 
-    public int UnhiddenWordCount()
-    {
-        int count = 0;
-        foreach (Word word in _words)
-        {
-            if (!word.IsHidden())
-            {
-                count++;
-            }
-        }
-        return count;
-    }
-
     public string GetDisplayText()
     {
         string displayText = _reference + "\n";
