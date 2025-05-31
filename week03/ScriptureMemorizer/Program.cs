@@ -24,9 +24,18 @@ class Program
             if (input.ToLower() == "quit")
                 break;
             scripture.HideRandomWords(3);
-
         }
 
+        Console.WriteLine($"Type out {reference.GetDisplayText()} to check your memorization.");
+        string userInput = Console.ReadLine();
+        if (userInput.Trim().Equals(reference.GetDisplayText(), StringComparison.OrdinalIgnoreCase))
+        {
+            Console.WriteLine("Congratulations! You have successfully memorized the scripture.");
+        }
+        else
+        {
+            Console.WriteLine("Keep practicing! You can do it.");
 
+        }
     }
 }
