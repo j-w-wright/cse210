@@ -13,7 +13,6 @@ public class MathAssignment : Assignment
     {
         _textbookSection = textbookSection;
     }
-
     public string GetProblems()
     {
         return _problems;
