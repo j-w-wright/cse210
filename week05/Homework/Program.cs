@@ -16,5 +16,12 @@ class Program
         mathAssignment.SetProblems("Problems 1-10");
         Console.WriteLine(mathAssignment.GetSummary());
         Console.WriteLine(mathAssignment.GetHomeworkList());
+        // Create an instance of WritingAssignment
+        WritingAssignment writingAssignment = new WritingAssignment();
+        writingAssignment.SetStudentName("Jared Wright");
+        writingAssignment.SetTopic("European History");
+        writingAssignment.SetEssayTitle("The Rise and Fall of Empires");
+        Console.WriteLine(writingAssignment.GetSummary());
+        Console.WriteLine(writingAssignment.GetWritingDetails());
     }
 }
