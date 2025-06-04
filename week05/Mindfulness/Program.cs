@@ -7,15 +7,19 @@ class Program
         Console.WriteLine("Hello World! This is the Mindfulness Project.");
 
         Console.WriteLine("Mindfulness is the practice of being present and fully engaged in the moment, without judgment. It can help reduce stress, improve focus, and enhance overall well-being.");
+
+        Console.Write("Please enter your name: ");
+        string userName = Console.ReadLine();
+
         // User selects a mindfulness activity from a menu.
         Console.WriteLine("Mindfulness Activities Available: ");
         Console.WriteLine("1. Breathing");
         Console.WriteLine("2. Reflection");
         Console.WriteLine("3. Listing");
-        Console.Write("Which mindfulness activity would you like to do? Please enter the number: ");
+        Console.Write($"{userName}, which mindfulness activity would you like to do? Please enter the number: ");
         int choice = Convert.ToInt32(Console.ReadLine());
         // Display the user's choice for testing
-        Console.WriteLine("You selected: " + choice);
+        Console.WriteLine($"{userName}, you selected: {choice}");
         
         /* if (choice == 1)
         {
