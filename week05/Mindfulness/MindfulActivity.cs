@@ -46,10 +46,6 @@ public class MindfulActivity
         spinnerAnimation.Add("/");
         spinnerAnimation.Add("-");
         spinnerAnimation.Add("\\"); // need to backslashes to override the escape character
-        spinnerAnimation.Add("|");
-        spinnerAnimation.Add("/");
-        spinnerAnimation.Add("-");
-        spinnerAnimation.Add("\\"); // need to backslashes to override the escape character
 
        
         DateTime startTime = DateTime.Now;
@@ -61,7 +57,7 @@ public class MindfulActivity
         {
             string s = spinnerAnimation[i];
             Console.Write(s);
-            System.Threading.Thread.Sleep(500); // Delay for 0.5 second
+            System.Threading.Thread.Sleep(100); // Delay for 0.5 second
             Console.Write("\b \b"); // Clear the previous character
 
             i++;

@@ -1,4 +1,4 @@
-using System;
+using System.IO;
 
 public class ListingActivity : MindfulActivity
 {
@@ -32,10 +32,12 @@ public class ListingActivity : MindfulActivity
     }
 
     public void GetListFromUser()
-    { 
+    {
+        string prompt = GetRandomPrompt();
         Console.WriteLine("List as many responses as you can to the following prompt:");
-        Console.WriteLine($"---{GetRandomPrompt()}---");
+        Console.WriteLine($"---{prompt}---");
         _count = 0;
+        List<string> responses = new List<string>();
         DateTime startTime = DateTime.Now;
         DateTime endTime = startTime.AddSeconds(_duration);
         while (DateTime.Now < endTime)
@@ -43,11 +45,25 @@ public class ListingActivity : MindfulActivity
             string response = Console.ReadLine();
             if (!string.IsNullOrEmpty(response))
             {
+                responses.Add(response);
                 _count++;
             }
         }
         Console.WriteLine($"You listed {_count} responses.");
+
+        // Save prompt and list of responses to a file.
+        string fileName = "ListingActivityResponses.txt";
+        {
+            using (StreamWriter writer = new StreamWriter(fileName, true))
+            {
+                writer.WriteLine($"Prompt: {prompt}");
+                writer.WriteLine("Responses:");
+                for (int i = 0; i < responses.Count; i++)
+                {
+                    writer.WriteLine($"Response {i + 1}: {responses[i]}");
+                }
+                writer.WriteLine("-----");
+            }
+        }
     }
-
-
 }
