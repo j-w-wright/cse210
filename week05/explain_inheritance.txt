@@ -1,0 +1,23 @@
+What is inheritance and why is it important?
+Your response must:
+ - Explain the meaning of Inheritance.
+    Inheritance means that there are methods that are coded within "parent" or base class and then they are passed from the "parent" or base class to "child" class(es) without specifically including those methods within the "child" class code.
+Highlight a benefit of Inheritance.
+    Classes that are similar, such as listing activity, breathing activity, reflecting activity can have a base class of activity which contains the code that pertains to all of the classes.  Then, each specific activity class only needs to contain code for that activity.  This organizes the code and simplifies the process for tracking down and making changes within the code.
+Provide an application of Inheritance.
+    For this week we have the Activity class and then the "child" classes of that are the specific mindfulness activities of Breathing, Reflecting, and Listing.  There are methods that each of the activities contain, so those are included within the "parent" activity class.  Then, the methods that are different are contained with the specific activities classes.
+Use a code example of Inheritance from the program you wrote. (You should copy and paste a few lines of code that demonstrate the use of the principle.)
+    public class BreathingActivity : MindfulActivity
+{
+    public BreathingActivity(string activityName, string description, int duration) : base(activityName, description, duration)
+    {
+        // Constructor for BreathingActivity
+        // You can initialize any specific properties for BreathingActivity here if needed
+    }
+    public string Breathing()
+    {
+        return "Breathing";
+    }
+
+    public void Run()
+Thoroughly explain these concepts. (This likely cannot be done in less than 100 words.)
