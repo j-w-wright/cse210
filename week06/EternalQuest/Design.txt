@@ -1,0 +1,36 @@
+Class: Program
+Variables: 
+Methods:
+Notes:
+ - include a menu of options (1. Create new goal, 2. List Goals, 3. Save Goals, 4. Load Goals, 5. Record an event, 6. Quit)
+
+Class: Goals
+Variables:
+_goalName : string
+_goalDescription : string
+_goalPoints : string
+_goalType : string
+
+Methods:
+
+
+Notes:
+ - base class
+
+    Class: Simple Goals
+    Variables:
+    Methods: 
+    Notes:
+     - derived class
+
+    Class: Eternal Goals
+    Variables:
+    Methods:
+    Notes:
+     - derived class
+
+    Class: Checklist Goals
+    Variables:
+    Methods:
+    Notes:
+     - derived class
