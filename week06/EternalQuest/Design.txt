@@ -50,6 +50,9 @@ Notes:
     Class: Eternal Goals
     Variables:
     Methods:
+     - Record an event
+     - isComplete - false
+     - GetStringRepresentation
     Notes:
      - derived class
 
