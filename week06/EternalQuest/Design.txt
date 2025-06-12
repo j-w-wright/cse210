@@ -1,3 +1,26 @@
+Overview:
+1. What does the program do?
+    * Makes the setting and completing of goals into a game.  User gets points for completing three types of goals.  
+    a. Simple goals - these are the "typical" goals.  An example would be running a 5K.
+    b. Eternal goals - these are goals that are "neverending" and tend to relate to spiritual things.  An example of this might be to read the scriptures.
+    c. Checklist goals - these are goals that have multiple instances before they are completed.  An example of these might be to attend the temple twice in the month.
+    * For each goal completed or done (i.e., Eternal goal) the user gets points.  For completion of the checklist goals the user would also get a bonus. 
+    * Displays the user score.
+    * Indicate whether the goals are completed.
+2. What user inputs does it have?
+    a. Select what they want to do.  Add a goal, List goals, Save goals, Load goals, Record an event, Quit
+    b. Add a goal - enter goal name, goal description (short), type of goal (e.g., Simple, Eternal), number of points
+    Type of goal is from a menu.  "The types of goals are: 1., 2., 3. What type of goal would you like to create?"
+    For checklist goal - how many times would you like to do the goal to consider it accomplished?
+    c. For saving and loading a goal - .txt file
+3. What output does it produce?
+    a. list of goals and whether they are completed
+    b. points earned from completing goals
+    c. printing the goals to the file.
+
+4. How does the program end?
+    * User entry choosing to "Quit"
+
 Class: Program
 Variables: 
 Methods:
@@ -9,9 +32,10 @@ Variables:
 _goalName : string
 _goalDescription : string
 _goalPoints : string
-_goalType : string
+_goalType : string (could be added, but necessary)
 
 Methods:
+- RecordEvent() : void (abstract)
 
 
 Notes:
@@ -34,3 +58,10 @@ Notes:
     Methods:
     Notes:
      - derived class
+
+    Class: GoalManager
+    Variables:
+    Methods:
+    Notes:
+     - manage the menus
+     - static functions
