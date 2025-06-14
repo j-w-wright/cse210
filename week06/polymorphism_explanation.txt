@@ -1,0 +1,37 @@
+What is polymorphism and why is it important?
+Your response must:
+
+Explain the meaning of Polymorphism.
+ - Allows a single interface to represent multiple types or behaviors.  
+Highlight a benefit of Polymorphism.
+ - A benefit is that the code can more customize the behaviors of each derived class without creating a new, very similar, method for each class.  This helps to keep the code more simple, organized, and easy to follow/review.
+Provide an application of Polymorphism.
+ - This week's project/assignment uses polymorphism with the base class of Goal and the derived classes of simple goal, eternal goal, and checklist goal.  The Goal class has the GetStringRepresentation method, so do the derived classes.  However, using polymorphism, I can have the GetStringRepresentation method behave differently within each of the derived classes.
+Use a code example of Polymorphism from the program you wrote. (You should copy and paste a few lines of code that demonstrate the use of the principle.)
+From the learning activity practice:
+    Shapes class:
+            foreach (Shapes sha in shapes)
+        {
+            Console.WriteLine($"Shape Color: {sha.GetColor()}");
+            Console.WriteLine($"Shape Area: {sha.GetArea()}");
+        }
+
+    Rectangle class:
+        public override double GetArea()
+        {
+            return (2 * _length) * (2 * _width);
+        }
+
+    Square class:
+        public override double GetArea()
+        {
+            return _side * _side;
+        }
+
+    Circle class:
+        public override double GetArea()
+        {
+            return Math.PI * _radius * _radius;
+        }
+    
+Thoroughly explain these concepts. (This likely cannot be done in less than 100 words.)

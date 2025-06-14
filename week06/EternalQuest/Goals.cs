@@ -2,21 +2,21 @@ using System;
 using System.Dynamic;
 
 
-public class Goals
+public class Goal
 {
-    private string _shortName;
+    private string _name;
     private string _description;
     private int _points;
 
 
-    public string GetShortName()
+    public string GetName()
     {
-        return _shortName;
+        return _name;
     }
 
-    public void SetShortName(string shortName)
+    public void SetName(string name)
     {
-        _shortName = shortName;
+        _name = name;
     }
     public string GetDescription()
     {
@@ -34,16 +34,29 @@ public class Goals
     {
         _points = points;
     }
-    public Goals(string shortName, string description, int points)
+    public Goal(string name, string description, int points)
     {
-        _shortName = shortName;
+        _name = name;
         _description = description;
         _points = points;
     }
 
     public virtual void RecordEvent()
     {
-
+        Console.Write("Enter the name of the goal: ");
+        string _name = Console.ReadLine();
+        Console.Write("Enter the description of the goal: ");
+        string _description = Console.ReadLine();
+        Console.Write("Enter the points for the goal: ");
+        int _points;
+        while (!int.TryParse(Console.ReadLine(), out _points) || _points < 0)
+        {
+            Console.Write("Invalid input. Please enter a non-negative integer for points: ");
+        }
+        SetName(_name);
+        SetDescription(_description);
+        SetPoints(_points);
+        Console.WriteLine($"Goal '{_name}' recorded with {_points} points.");
     }
 
     public virtual bool IsComplete()
@@ -53,11 +66,11 @@ public class Goals
 
     public string GetDetailsString()
     {
-        return $"{_shortName} - {_description} (Points: {_points})";
+        return $"{_name} - {_description} (Points: {_points})";
     }
 
-    public string GetStringRepresentation()
+    public virtual string GetStringRepresentation()
     { 
-        return $"{_shortName}|{_description}|{_points}";
+        return $"{_name}|{_description}|{_points}";
     }
 }

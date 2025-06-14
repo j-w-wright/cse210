@@ -1,0 +1,25 @@
+Four Principles of Programming with Classes:
+1. Briefly define the principle.
+2. How did I use that principle in one of my programs.
+3. How did using that principle help that program become more flexible for future changes?
+
+
+Abstraction:
+1.  Abstraction is focusing on/displaying the relevant details and hiding the irrelevant implementation details.  The example in the lesson about the print function - programmers can use the print function within their code without seeing and knowing the thousands of lines of code within that function.
+2.  In coding the Journal program I used the Entry class to code what I wanted in the journal entries and then in the Program, the coding of the Entry is not seen, but the functionality works.
+3.  If there is an needed change for the journal entries I can go to the Entry class and make the change, without reviewing all of the code in the program and connected files.
+
+Encapsulation:
+1.  Containing the variables and methods within a class, so that the access is controlled within that class.  Get and Set methods can be included within the class to access the restricted "private" data and behaviors.
+2.  In coding the YouTube Videos assignment within the Comments class, I made the variables of _author and _commentText private and then implemented get and set within constructors to access the private variables.
+3.  This will restrict changes to the variables from outside of the Comment class.  So, if changes need to be made I can make those within the class and without reviewing all of the code.
+
+Inheritance:
+1.  Inheritance means that there are methods that are coded within "parent" or base class and then they are passed from the "parent" or base class to "child" class(es) without specifically including those methods within the "child" class code.
+2.  For this week we have the Activity class and then the "child" classes of that are the specific mindfulness activities of Breathing, Reflecting, and Listing.  There are methods that each of the activities contain, so those are included within the "parent" activity class.  Then, the methods that are different are contained with the specific activities classes.
+3.  Classes that are similar, such as listing activity, breathing activity, reflecting activity can have a base class of activity which contains the code that pertains to all of the classes.  Then, each specific activity class only needs to contain code for that activity.  This organizes the code and simplifies the process for tracking down and making changes within the code.
+
+Polymorphism:
+1.  Allows for a single method to represent multiple types or behaviors between the base class and the derived classes.
+2.  This week's project/assignment uses polymorphism with the base class of Goal and the derived classes of simple goal, eternal goal, and checklist goal.  The Goal class has the GetStringRepresentation method, so do the derived classes.  However, using polymorphism, I can have the GetStringRepresentation method behave differently within each of the derived classes.
+3.  A benefit to create more flexibility is that the code can customize the behaviors of each derived class without creating a new, very similar, method for each class.  This helps to keep the code more simple, organized, and easy to follow/review.  It also allows me to target any changes within the specific class.
