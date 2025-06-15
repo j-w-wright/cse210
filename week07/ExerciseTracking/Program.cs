@@ -7,7 +7,7 @@ class Program
     static List<ExerciseActivity> activities = new List<ExerciseActivity>();
     static void Main(string[] args)
     {
-        Console.WriteLine("Welcome to The Wright Gym!  This is app will help in tracking your exercise activities during your time at the gym!");
+        Console.WriteLine("Welcome to The Wright Gym!  This app will help you in tracking your exercise activities during your time at the gym!");
         DisplayMenu();
     }
 
