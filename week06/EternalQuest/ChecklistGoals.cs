@@ -1,31 +1,42 @@
 using System;
 
-class ChecklistGoals : Goal
+public class ChecklistGoals : Goal
 { 
     private int _targetCount;
-    private int _currentCount;
+    private int _amountCompleted;
+    private int _bonus;
 
-    public ChecklistGoals(string name, string description, int points, int targetCount) : base(name, description, points)
+    public ChecklistGoals(string name, string description, int points, int targetCount, int _bonus) : base(name, description, points)
     {
         _targetCount = targetCount;
-        _currentCount = 0;
+        _amountCompleted = 0;
+        _bonus = 0;
     }
 
     public override void RecordEvent()
     {
-        if (_currentCount < _targetCount)
+        if (_amountCompleted < _targetCount)
         {
-            _currentCount++;
+            _amountCompleted++;
         }
+        else if (IsComplete())
+        {
+            return;
+        }
+
     }
 
     public override bool IsComplete()
     {
-        return _currentCount >= _targetCount;
+        return _amountCompleted >= _targetCount;
     }
 
+    public override string GetDetailsString()
+    {
+        return $"[ ] Goal: {GetName()} - {GetDescription()} {_amountCompleted}/{_targetCount}";
+    }
     public override string GetStringRepresentation()
     {
-        return $"{GetName()} | {GetDescription()} | {GetPoints()} | Checklist | {_currentCount}/{_targetCount}";
+        return $"{GetName()} | {GetDescription()} | {GetPoints()} | {_amountCompleted}/{_targetCount} | Checklist | ";
     }
 }

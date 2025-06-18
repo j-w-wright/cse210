@@ -7,13 +7,13 @@ public class Goal
     private string _name;
     private string _description;
     private int _points;
+    private bool _isComplete = false;
 
 
     public string GetName()
     {
         return _name;
     }
-
     public void SetName(string name)
     {
         _name = name;
@@ -43,33 +43,21 @@ public class Goal
 
     public virtual void RecordEvent()
     {
-        Console.Write("Enter the name of the goal: ");
-        string _name = Console.ReadLine();
-        Console.Write("Enter the description of the goal: ");
-        string _description = Console.ReadLine();
-        Console.Write("Enter the points for the goal: ");
-        int _points;
-        while (!int.TryParse(Console.ReadLine(), out _points) || _points < 0)
-        {
-            Console.Write("Invalid input. Please enter a non-negative integer for points: ");
-        }
-        SetName(_name);
-        SetDescription(_description);
-        SetPoints(_points);
-        Console.WriteLine($"Goal '{_name}' recorded with {_points} points.");
+        _isComplete = true; // mark the goal as complete
+        Console.WriteLine($"The'{_name}' goal has been recorded with {_points} points.");   
     }
 
     public virtual bool IsComplete()
     {
-        return false; // Base class assumes goals are not complete
+        return _isComplete; // completion status
     }
 
-    public string GetDetailsString()
+    public virtual string GetDetailsString()
     {
-        return $"{_name} - {_description} (Points: {_points})";
+        return $"[ ] Goal: {_name} - {_description}";
     }
 
-    public virtual string GetStringRepresentation()
+    public virtual string GetStringRepresentation() // returns a string representation of the goal
     { 
         return $"{_name}|{_description}|{_points}";
     }
