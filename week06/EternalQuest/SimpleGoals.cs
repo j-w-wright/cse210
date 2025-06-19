@@ -13,12 +13,13 @@ public class SimpleGoal : Goal
     public override void RecordEvent()
     {
         base.RecordEvent();
-        //IsComplete(); // Mark the goal as complete after recording the event
+        _isComplete = true; // Mark the goal as complete after recording the event
+
     }
 
     public override bool IsComplete()
     {
-        return true; // Simple goals are always complete after being recorded
+        return _isComplete; // Simple goals are always complete after being recorded
     }
 
     public override string GetStringRepresentation() //use this to save to a text file.

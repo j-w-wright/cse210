@@ -11,6 +11,7 @@ class Program
         Console.WriteLine();
 
         GoalManager goalManager = new GoalManager();
+        goalManager.DisplayPlayerInfo();
         goalManager.Start();
 
     }

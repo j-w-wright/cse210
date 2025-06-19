@@ -43,7 +43,7 @@ public class Goal
 
     public virtual void RecordEvent()
     {
-        _isComplete = true; // mark the goal as complete
+
         Console.WriteLine($"The'{_name}' goal has been recorded with {_points} points.");   
     }
 
@@ -59,6 +59,6 @@ public class Goal
 
     public virtual string GetStringRepresentation() // returns a string representation of the goal
     { 
-        return $"{_name}|{_description}|{_points}";
+        return $"[ ] {_name}|{_description}|{_points}";
     }
 }

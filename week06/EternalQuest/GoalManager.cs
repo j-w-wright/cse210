@@ -30,7 +30,7 @@ public class GoalManager
             Console.WriteLine("4. Load Goals");
             Console.WriteLine("5. Record Event");
             Console.WriteLine("6. Quit");
-            Console.Write("What would you like to do?  (Enter the number) ");
+            Console.Write("What would you like to do? (Enter the number) ");
             choice = Convert.ToInt32(Console.ReadLine());
             Console.WriteLine();
 
