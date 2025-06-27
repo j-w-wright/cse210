@@ -150,7 +150,7 @@ public class GoalManager
             foreach (Goal goal in _goals)
             {
                 file.WriteLine(goal.GetStringRepresentation());
-                Console.WriteLine("----------------------------------");
+                file.WriteLine("-----------------------------");
             }
         }
         Console.WriteLine($"Goals saved to {filename}.");
